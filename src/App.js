@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { GlobalStyles } from "./styles/GlobalStyles";
+import FormNewFlashCard from "./components/FormNewFlashCard";
+import FlashcardsList from "./components/FlashcardsList/index";
+import styled from "styled-components";
+import SendedContextProvider from './contexts/SendedContext'
+
+const Main = styled.main`
+    padding: 1.5rem;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <SendedContextProvider>
+            <Main>
+                <GlobalStyles />
+                <FormNewFlashCard />
+                <FlashcardsList />
+            </Main>
+        </SendedContextProvider>
+    );
 }
 
 export default App;
