@@ -1,4 +1,4 @@
-#Flashcards App
+# Flashcards App
 App para estudo com base na criacao de flashcards. Projeto jeito com React, styled-components e json-server local.
 
 ## Getting Started 
